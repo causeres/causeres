@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{%load static%}
+
+{% block main %}
+
+<h3>index</h3>
+{% if not username %}
+	<tr>
+		<td>匿名です</td>
+		<td>{{ kanji }}</td>
+	</tr>
+{% elif  "春風" == username %}
+   	<tr>
+		<td>自分です。</td>
+		<td>{{ kanji1 }}</td>
+	</tr>
+{% else %}
+   	<tr>
+		<td>{{ username }}</td>、さんいらっしゃい
+	</tr>
+{% endif %}
+
+
+<img src="{% static 'test.jpg' %}" />
+{%endblock%}

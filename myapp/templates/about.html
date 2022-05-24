@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load humanize %}
+
+{% block main %}
+
+<h3>about</h3>
+num={{num|intcomma}}
+
+<ul>
+{% for atem in mylist%}
+<li>{{atem}}</li>
+{% empty %}
+データがありません
+{% endfor %}
+
+</ul>
+
+{%endblock%}
